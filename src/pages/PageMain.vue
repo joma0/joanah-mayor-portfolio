@@ -1,12 +1,21 @@
 <script setup>
 import CardProject from "../components/CardProject.vue";
-import all-projects from "../../data/projects.json"
+import projects from "../../data/projects.json";
 </script>
 
 <template>
   <h1>Mon portfolio</h1>
 
-  <li>
-    <CardProject :title="'Naturaquest'" :skill="'UXUI'"></CardProject>
+  <li v-for="project in projects" :key="project.title">
+    <CardProject
+      :title="project.title"
+      :domain="project.domain"
+      :description="project.description"
+      :features="project.features"
+      :steps="project.steps"
+      :result="project.result"
+      :tools="project.tools"
+      :dev_languages="project.dev_languages"
+    ></CardProject>
   </li>
 </template>

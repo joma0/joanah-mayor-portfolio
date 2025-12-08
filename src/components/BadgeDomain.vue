@@ -5,7 +5,7 @@ const props = defineProps({
 </script>
 <template>
   <span
-    class="inline-block px-3 py-1 bg-blue-500 text-white rounded-full text-sm font-medium"
+    class="inline-block px-3 py-1 bg-blue-500 text-white rounded-full text-xs font-medium"
   >
     {{ label }}
   </span>

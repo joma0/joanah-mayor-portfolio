@@ -1,0 +1,13 @@
+[
+  {
+    "title": "Naturaquest",
+    "domain": ["UX/UI"],
+    "cover_image": "url",
+    "description": "Ce projet est incroyable",
+    "features": ["feature 1", "feature 2", "feature 3"],
+    "steps": ["step 1", "step 2", "step 3", "step 4"],
+    "result": "Maquettes",
+    "tools": ["Figma"],
+    "technologies": []
+  }
+]

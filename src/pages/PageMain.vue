@@ -1,5 +1,6 @@
 <script setup>
-import CardProject from "../components/CardProject.vue";
+import CardProjectFull from "../components/CardProjectFull.vue";
+import CardProjectResume from "../components/CardProjectResume.vue";
 import projects from "../../data/projects.json";
 </script>
 
@@ -7,7 +8,17 @@ import projects from "../../data/projects.json";
   <h1>Mon portfolio</h1>
 
   <li v-for="project in projects" :key="project.title">
-    <CardProject
+    <CardProjectResume
+      :title="project.title"
+      :domain="project.domain"
+      :description="project.description"
+      :tools="project.tools"
+      :dev_languages="project.dev_languages"
+    ></CardProjectResume>
+  </li>
+
+  <li v-for="project in projects" :key="project.title">
+    <CardProjectFull
       :title="project.title"
       :domain="project.domain"
       :description="project.description"
@@ -16,6 +27,6 @@ import projects from "../../data/projects.json";
       :result="project.result"
       :tools="project.tools"
       :dev_languages="project.dev_languages"
-    ></CardProject>
+    ></CardProjectFull>
   </li>
 </template>

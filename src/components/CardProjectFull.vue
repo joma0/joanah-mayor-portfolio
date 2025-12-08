@@ -1,5 +1,5 @@
 <script setup>
-import ChipSkill from "./ChipSkill.vue";
+import BadgeDomain from "./BadgeDomain.vue";
 
 const props = defineProps({
   title: String,
@@ -15,7 +15,7 @@ const props = defineProps({
 
 <template>
   <h1>{{ title }}</h1>
-  <ChipSkill :label="domain"></ChipSkill>
+  <BadgeDomain :label="domain"></BadgeDomain>
   <p>{{ description }}</p>
   <li v-for="feature in features">
     {{ feature }}

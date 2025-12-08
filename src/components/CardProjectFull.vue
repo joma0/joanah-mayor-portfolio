@@ -4,7 +4,7 @@ import BadgeDomain from "./BadgeDomain.vue";
 const props = defineProps({
   title: String,
   domain: String,
-  description: String,
+  long_description: String,
   features: Array,
   steps: Array,
   result: String,
@@ -16,7 +16,7 @@ const props = defineProps({
 <template>
   <h1>{{ title }}</h1>
   <BadgeDomain :label="domain"></BadgeDomain>
-  <p>{{ description }}</p>
+  <p>{{ long_description }}</p>
   <li v-for="feature in features">
     {{ feature }}
   </li>

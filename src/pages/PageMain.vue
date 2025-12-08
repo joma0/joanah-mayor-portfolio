@@ -11,15 +11,19 @@ const IMG_BASE_URL = "../../../public/assets/";
     <h1>Mon portfolio</h1>
 
     <div
-      class="grid gap-2 p-6"
-      style="grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr))"
+      class="grid p-4"
+      style="
+        grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+        column-gap: 1rem;
+        row-gap: 1rem;
+      "
     >
       <div v-for="project in projects" :key="project.title">
         <CardProjectResume
           :title="project.title"
           :domain="project.domain"
           :cover_image="IMG_BASE_URL + project.cover_image"
-          :description="project.description"
+          :short_description="project.short_description"
           :tools="project.tools"
           :dev_languages="project.dev_languages"
         ></CardProjectResume>
@@ -30,7 +34,7 @@ const IMG_BASE_URL = "../../../public/assets/";
       <CardProjectFull
         :title="project.title"
         :domain="project.domain"
-        :description="project.description"
+        :long_description="project.long_description"
         :features="project.features"
         :steps="project.steps"
         :result="project.result"

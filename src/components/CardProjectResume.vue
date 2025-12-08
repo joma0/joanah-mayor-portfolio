@@ -5,7 +5,7 @@ const props = defineProps({
   title: String,
   domain: String,
   cover_image: String,
-  description: String,
+  short_description: String,
   tools: Array,
   dev_languages: Array,
 });
@@ -34,7 +34,7 @@ const props = defineProps({
 
     <!-- Description -->
     <p class="text-gray-700 text-xs mb-3 text-center leading-relaxed flex-grow">
-      {{ description }}
+      {{ short_description }}
     </p>
   </div>
 </template>

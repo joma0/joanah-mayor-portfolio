@@ -3,10 +3,26 @@
     "title": "Naturaquest",
     "domain": "UX/UI",
     "cover_image": "url",
-    "description": "Ce projet est incroyable",
-    "features": ["feature 1", "feature 2", "feature 3"],
-    "steps": ["step 1", "step 2", "step 3", "step 4"],
-    "result": "Maquettes",
+    "short_description": "Bien plus qu'un simple jeu. Vos actions ont un réel impact sur l'environnement.",
+    "long_description": "Naturaquest a pour objectif d'encourager les citoyens suisses à prendre part à des activités en faveur de l'environnement grâce à la gamification.",
+    "features": [
+      {
+        "title": "Effectuez des missions pour récolter des points",
+        "description": "Trouvez des missions à proximité de chez vous. Vous participez ainsi à préserver l'environnement, tout en récoltant des points pour vous et votre équipe.",
+        "image": "url"
+      },
+      {
+        "title": "Faites gagner votre équipe",
+        "description": "Trois équipes s'affrontent. Laquelle réussira à contrôler le plus grand nombre de cantons ?",
+        "image": "url"
+      }
+    ],
+    "steps": [
+      "Proposer un concept de gamification",
+      "Classifier les données récoltées par les missions",
+      "Réaliser les maquettes"
+    ],
+    "results": "Maquettes",
     "tools": ["Figma"],
     "dev_languages": []
   },
@@ -14,10 +30,46 @@
     "title": "Chrono Tours",
     "domain": "UX/UI",
     "cover_image": "naturaquest_01.jpeg",
-    "description": "Une application pour voyager dans le temps !!!!!!",
-    "features": ["feature 1", "feature 2", "feature 3", "feature 4"],
-    "steps": ["step 1", "step 2"],
-    "result": "Design System, Maquettes, Prototype cliquable, Site vitrine de promotion",
+    "short_description": "Des voyages pas comme les autres : ne voyagez plus seulement dans l'espace, mais dans le temps !",
+    "long_description": "Chrono Tours est une application qui permet de réserver des voyages, non pas dans l'espace, mais dans le temps.",
+    "features": [
+      {
+        "title": "Des instants du passé à portée de main",
+        "description": "Retrouvez une vaste sélection de destinations, classées par thème, région ou ambiance. Des grandes dates aux évènements les plus méconnus,il y en a pour tous.",
+        "image": "url"
+      },
+      {
+        "title": "Soyez fin prêt pour votre voyage",
+        "description": "Ne laissez rien au hasard grâce à un guide de voyage détaillé pour chaque destination, rédigé par des experts et agrémenté d’après les avis de nos utilisateurs. ",
+        "image": "url"
+      },
+      {
+        "title": "Replongez dans vos plus belles aventures",
+        "description": "Avec le carnet de bord, ne perdez rien de vos aventures : vos meilleures anecdotes, vos plus belles photos, ou encore vos rencontres les plus marquantes. ",
+        "image": "url"
+      },
+      {
+        "title": "Votre voyage de A à Z sur une seule app",
+        "description": "De la réservation à l’impression de votre carnet de bord, tout se passe sur une seule application. Avant, pendant et après votre voyage, gardez le contrôle. ",
+        "image": "url"
+      }
+    ],
+    "steps": [
+      "Architecture de l'information",
+      "User flow",
+      "Wireframes",
+      "Design System",
+      "Maquettes de l'application",
+      "Prototype cliquable",
+      "Maquettes du site vitrine",
+      "Présentation du produit"
+    ],
+    "results": [
+      "Design System",
+      "Maquettes de l'application",
+      "Prototype cliquable de l'application",
+      "Maquettes responsive du site vitrine"
+    ],
     "tools": ["Figma"],
     "dev_languages": []
   },
@@ -25,10 +77,27 @@
     "title": "Musicproject",
     "domain": "Développement",
     "cover_image": "url",
-    "description": "La musique au travers des siècles",
-    "features": ["feature 1", "feature 2", "feature 3"],
-    "steps": ["step 1", "step 2"],
-    "result": "Site web",
+    "short_description": "La musique au travers des siècles",
+    "long_description": "Musicproject vous permet de découvrir l'évolution des styles musicaux au fil des années sous forme de scrollytelling.",
+    "features": [
+      {
+        "title": "Effectuez des missions pour récolter des points",
+        "description": "Trouvez des missions à proximité de chez vous. Vous participez ainsi à préserver l'environnement, tout en récoltant des points pour vous et votre équipe.",
+        "image": "url"
+      },
+      {
+        "title": "Faites gagner votre équipe",
+        "description": "Trois équipes s'affrontent. Laquelle réussira à contrôler le plus grand nombre de cantons ?",
+        "image": "url"
+      }
+    ],
+    "steps": [
+      "Rassembler l'information",
+      "Créer le jeu de données",
+      "Définir la structure et la navigation du site",
+      "Mettre en place les visualisations"
+    ],
+    "results": "Site web",
     "tools": [],
     "dev_languages": ["D3", "Javascript", "HTML", "CSS"]
   },
@@ -36,11 +105,45 @@
     "title": "Légendes Suisses",
     "domain": "UX/UI",
     "cover_image": "url",
-    "description": "Les légendes urbaines de la Suisse",
-    "features": ["feature 1", "feature 2", "feature 3"],
-    "steps": ["step 1", "step 2"],
-    "result": "Site web POC",
+    "short_description": "Les légendes urbaines de la Suisse",
+    "long_description": "Découvrez les légendes incroyables qui sillonnent la Suisse.",
+    "features": [
+      {
+        "title": "Découvrez plein de légendes passionnantes",
+        "description": "Naviguez à travers la carte et explorer ces histoires fascinantes qu'on raconte en Suisse.",
+        "image": "url"
+      },
+      {
+        "title": "Se divertir en apprenant",
+        "description": "Lisez ou écoutez ces histoires fascinantes ...",
+        "image": "url"
+      }
+    ],
+    "steps": [
+      "Comprendre les utilisateurs (personas)",
+      "Définir et prioriser les besoins",
+      "Définir l'architecture de l'information",
+      "Définir les fonctionnalités souhaitées",
+      "Réaliser le POC"
+    ],
+    "results": ["Site web POC"],
     "tools": ["Lovable"],
+    "dev_languages": []
+  },
+  {
+    "title": "Cosy Coffee",
+    "domain": "Design graphique",
+    "cover_image": "url",
+    "description": "Un café particulier",
+    "features": [],
+    "steps": [
+      "Rassembler les idées",
+      "Poser les couleurs et la typo",
+      "Concevoir le logo",
+      "Réaliser la charte graphique"
+    ],
+    "results": ["Logo en 3 versions", "Charte graphique (simple)"],
+    "tools": ["Illustrator", "Indesign"],
     "dev_languages": []
   }
 ]

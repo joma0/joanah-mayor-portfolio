@@ -29,8 +29,8 @@
   {
     "title": "Chrono Tours",
     "domain": "UX/UI",
-    "cover_image": "chronotours_cover",
-    "short_description": "Des voyages pas comme les autres : ne voyagez plus seulement dans l'espace, mais dans le temps !",
+    "cover_image": "chronotours_cover.png",
+    "short_description": "Voyagez non seulement dans l'espace mais aussi dans le temps !",
     "long_description": "Chrono Tours est une application qui permet de réserver des voyages, non pas dans l'espace, mais dans le temps.",
     "features": [
       {
@@ -76,8 +76,8 @@
   {
     "title": "Musicproject",
     "domain": "Développement",
-    "cover_image": "url",
-    "short_description": "La musique au travers des siècles",
+    "cover_image": "musicproject_cover.png",
+    "short_description": "Découvrez l'évolution des genres musicaux au travers des siècles",
     "long_description": "Musicproject vous permet de découvrir l'évolution des styles musicaux au fil des années sous forme de scrollytelling.",
     "features": [
       {

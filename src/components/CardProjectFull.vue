@@ -2,6 +2,8 @@
 import BadgeDomain from "./BadgeDomain.vue";
 import { computed } from "vue";
 
+console.log("Hello World");
+
 const IMG_BASE_URL = "/assets/";
 
 const props = defineProps({

@@ -1,5 +1,6 @@
 <script setup>
 import BadgeDomain from "./BadgeDomain.vue";
+import { computed } from "vue";
 
 const IMG_BASE_URL = "../../../public/assets/";
 
@@ -12,6 +13,13 @@ const props = defineProps({
   result: String,
   tools: Array,
   dev_languages: Array,
+});
+
+const domainClass = computed(() => {
+  if (props.domain === "UX/UI") return "uxui";
+  if (props.domain === "Développement") return "dev";
+  if (props.domain === "Design graphique") return "design";
+  return "uxui"; // classe par défaut si aucun match
 });
 </script>
 
@@ -27,25 +35,28 @@ const props = defineProps({
 
     <!-- Badge domaine -->
     <div class="mb-4 flex justify-center">
-      <BadgeDomain :label="domain"></BadgeDomain>
+      <BadgeDomain :label="domain" :class="domainClass"></BadgeDomain>
     </div>
 
-    <!-- Ligne de séparation -->
-    <div class="h-1 bg-gray-300 mb-4"></div>
-
     <!-- Description longue -->
-    <p class="text-gray-700 text-sm mb-6 text-center leading-relaxed">
+    <p
+      class="text-gray-700 text-m font-semibold mb-6 text-center leading-relaxed"
+    >
       {{ long_description }}
     </p>
 
+    <!-- Ligne de séparation -->
+    <div class="border-t-2 border-gray-300 w-full mb-10"></div>
+
     <!-- Features -->
     <div v-if="features && features.length" class="mb-6 w-full">
-      <ul class="space-y-0 flex flex-col items-center">
+      <ul class="space-y-8 flex flex-col items-center">
         <li
           v-for="(feature, index) in features"
           :key="feature.title"
           :class="[
-            'flex flex-col md:flex-row gap-3 max-w-3xl items-center w-full px-2 md:px-0',
+            'flex flex-col md:flex-row gap-3 max-w-3xl w-full px-2 md:px-0',
+            'items-center justify-center', // centrage total
             index % 2 === 1 ? 'md:flex-row-reverse' : '',
           ]"
         >
@@ -53,15 +64,18 @@ const props = defineProps({
           <img
             :src="IMG_BASE_URL + feature.image"
             :alt="'Mockup'"
+            class="object-contain flex-shrink-0 w-auto h-auto"
             :style="{
-              height: 'clamp(10vh, 30vh, 60vh)',
-              width: 'auto',
+              maxHeight: '60vh',
+              maxWidth: '60vh',
               transform: index % 2 === 0 ? 'rotate(-2deg)' : 'rotate(2deg)',
             }"
-            class="object-contain flex-shrink-0 w-full md:w-auto"
           />
+
           <!-- Texte -->
-          <div class="flex-1 px-4 md:px-6 py-4 w-full md:w-auto">
+          <div
+            class="flex-1 px-4 md:px-6 py-4 w-full md:w-auto min-h-40 md:min-h-60 lg:min-h-72"
+          >
             <h4 class="text-lg font-bold text-gray-900 mb-2 text-center">
               {{ feature.title }}
             </h4>
@@ -74,6 +88,7 @@ const props = defineProps({
     </div>
 
     <!-- Étapes -->
+    <div class="flex flex-col md:flex-row gap-6 w-full mt-10"></div>
     <div v-if="steps && steps.length" class="mb-6">
       <p class="text-gray-900 text-sm font-semibold mb-2">DÉMARCHE</p>
       <ol class="space-y-2">

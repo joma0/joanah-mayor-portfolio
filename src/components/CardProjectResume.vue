@@ -1,5 +1,6 @@
 <script setup>
 import BadgeDomain from "./BadgeDomain.vue";
+import { computed } from "vue";
 
 const props = defineProps({
   title: String,
@@ -9,33 +10,44 @@ const props = defineProps({
   tools: Array,
   dev_languages: Array,
 });
+
+const domainClass = computed(() => {
+  if (props.domain === "UX/UI") return "uxui";
+  if (props.domain === "Développement") return "dev";
+  if (props.domain === "Design graphique") return "design";
+  return "uxui"; // classe par défaut si aucun match
+});
 </script>
 
 <template>
   <div
-    class="relative w-60 h-80 rounded-2xl p-5 shadow-lg border-3 border-gray-800 hover:shadow-2xl transition-all duration-300 hover:scale-105 cursor-pointer flex flex-col"
+    :class="[
+      domainClass,
+      'relative w-60 h-80 rounded-xl p-2 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 cursor-pointer flex flex-col',
+    ]"
   >
-    <!-- Titre centré en haut -->
-    <h2 class="text-1xl font-bold text-gray-900 mb-2 text-center tracking-wide">
-      {{ title }}
-    </h2>
-
     <!-- Image de couverture -->
     <img
       :src="cover_image"
       :alt="'Mockup du projet'"
-      class="w-full h-60 object-cover rounded mb-2"
+      class="w-full h-60 object-cover mb-2"
     />
 
-    <!-- Badge domaine -->
-    <div class="mb-3 flex justify-center">
-      <BadgeDomain :label="domain"></BadgeDomain>
-    </div>
+    <div class="bg-white bg-opacity-50">
+      <!-- Titre centré en haut -->
+      <h2
+        class="text-1xl font-bold text-gray-900 mb-2 text-center tracking-wide"
+      >
+        {{ title }}
+      </h2>
 
-    <!-- Description -->
-    <p class="text-gray-700 text-xs mb-3 text-center leading-relaxed flex-grow">
-      {{ short_description }}
-    </p>
+      <!-- Description -->
+      <p
+        class="text-gray-700 text-xs mb-3 text-center leading-relaxed flex-grow"
+      >
+        {{ short_description }}
+      </p>
+    </div>
   </div>
 </template>
 
@@ -44,9 +56,9 @@ const props = defineProps({
   background-color: #023059;
 }
 .dev {
-  background-color: #d98032;
+  background-color: #4e6e4b;
 }
 .design {
-  background-color: #8c7e35;
+  background-color: #cda438;
 }
 </style>

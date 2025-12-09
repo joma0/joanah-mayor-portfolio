@@ -1,6 +1,7 @@
 <script setup>
 import CardProjectFull from "../components/CardProjectFull.vue";
 import CardProjectResume from "../components/CardProjectResume.vue";
+import BadgeDomain from "../components/BadgeDomain.vue";
 import projects from "../../data/projects.json";
 import { ref } from "vue";
 
@@ -22,13 +23,15 @@ const closeProject = () => {
       Mon portfolio
     </h1>
 
+    <!-- Badge domaine -->
+    <div class="mb-3 flex justify-center gap-4">
+      <BadgeDomain :label="'UX/UI'" class="uxui"></BadgeDomain>
+      <BadgeDomain :label="'Développement'" class="dev"></BadgeDomain>
+      <BadgeDomain :label="'Design graphique'" class="design"></BadgeDomain>
+    </div>
+
     <div
-      class="grid p-4 md:p-12 lg:p-16 max-w-7xl w-full"
-      style="
-        grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
-        column-gap: 1rem;
-        row-gap: 1rem;
-      "
+      class="grid p-4 md:p-12 lg:p-16 max-w-7xl w-full gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-auto"
     >
       <div
         v-for="project in projects"

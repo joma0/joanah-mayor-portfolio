@@ -2,19 +2,19 @@
   {
     "title": "Naturaquest",
     "domain": "UX/UI",
-    "cover_image": "url",
+    "cover_image": "naturaquest_cover.png",
     "short_description": "Bien plus qu'un simple jeu. Vos actions ont un réel impact sur l'environnement.",
     "long_description": "Naturaquest a pour objectif d'encourager les citoyens suisses à prendre part à des activités en faveur de l'environnement grâce à la gamification.",
     "features": [
       {
         "title": "Effectuez des missions pour récolter des points",
         "description": "Trouvez des missions à proximité de chez vous. Vous participez ainsi à préserver l'environnement, tout en récoltant des points pour vous et votre équipe.",
-        "image": "url"
+        "image": "naturaquest_feature_1.png"
       },
       {
         "title": "Faites gagner votre équipe",
         "description": "Trois équipes s'affrontent. Laquelle réussira à contrôler le plus grand nombre de cantons ?",
-        "image": "url"
+        "image": "naturaquest_feature_2.png"
       }
     ],
     "steps": [

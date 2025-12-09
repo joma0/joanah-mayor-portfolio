@@ -81,18 +81,28 @@
     "long_description": "Musicproject vous permet de découvrir l'évolution des styles musicaux au fil des années sous forme de scrollytelling.",
     "features": [
       {
-        "title": "Effectuez des missions pour récolter des points",
-        "description": "Trouvez des missions à proximité de chez vous. Vous participez ainsi à préserver l'environnement, tout en récoltant des points pour vous et votre équipe.",
+        "title": "Graphique 1 : Chronologie",
+        "description": "Visualisez la popularité des différents genres au fil des siècles",
         "image": "url"
       },
       {
-        "title": "Faites gagner votre équipe",
-        "description": "Trois équipes s'affrontent. Laquelle réussira à contrôler le plus grand nombre de cantons ?",
+        "title": "Graphique 2 : Co-occurences",
+        "description": "Visualisez les connexions entre les différents genres",
+        "image": "url"
+      },
+      {
+        "title": "Graphique 2 : Fusion",
+        "description": "Testez et visualisez les fusions entre deux genres",
+        "image": "url"
+      },
+      {
+        "title": "Graphique 4 : Artistes",
+        "description": "Découvrez des arties pour chacun des genres, et leur popularité sur Spotify",
         "image": "url"
       }
     ],
     "steps": [
-      "Rassembler l'information",
+      "Rassembler l'information et les sources",
       "Créer le jeu de données",
       "Définir la structure et la navigation du site",
       "Mettre en place les visualisations"
@@ -105,7 +115,7 @@
     "title": "Légendes Suisses",
     "domain": "UX/UI",
     "cover_image": "url",
-    "short_description": "Les légendes urbaines de la Suisse",
+    "short_description": "Plongez vous dans l'univers fascinant des légendes urbaines suisses",
     "long_description": "Découvrez les légendes incroyables qui sillonnent la Suisse.",
     "features": [
       {
@@ -134,12 +144,13 @@
     "title": "Cosy Coffee",
     "domain": "Design graphique",
     "cover_image": "url",
-    "description": "Un café particulier",
+    "short_description": "Du café et des jeux",
+    "long_description": "Cosy Coffee vous propose un moment de détente autour d'un café bien chaud, et des jeux de sociétés. Un moment à partager avec vos amis, ou une occasion de faire de nouvelles rencontres.",
     "features": [],
     "steps": [
-      "Rassembler les idées",
+      "Rassembler les idées et inspirations",
       "Poser les couleurs et la typo",
-      "Concevoir le logo",
+      "Créer le logo",
       "Réaliser la charte graphique"
     ],
     "results": ["Logo en 3 versions", "Charte graphique (simple)"],

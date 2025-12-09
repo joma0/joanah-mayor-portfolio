@@ -33,7 +33,7 @@ const domainClass = computed(() => {
       class="w-full h-60 object-cover mb-2"
     />
 
-    <div class="bg-white bg-opacity-50">
+    <div class="bg-[#fdf5e6]">
       <!-- Titre centré en haut -->
       <h2
         class="text-1xl font-bold text-gray-900 mb-2 text-center tracking-wide"

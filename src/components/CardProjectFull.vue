@@ -27,7 +27,7 @@ const domainClass = computed(() => {
 
 <template>
   <div
-    class="relative w-screen h-screen bg-white flex flex-col overflow-y-auto p-12"
+    class="relative w-screen h-screen bg-[#fdf5e6] flex flex-col overflow-y-auto p-12"
     style="max-width: 100vw; max-height: 100vh"
   >
     <!-- Titre centré en haut -->
@@ -90,7 +90,6 @@ const domainClass = computed(() => {
     </div>
 
     <!-- Étapes -->
-    <div class="flex flex-col md:flex-row gap-6 w-full mt-10"></div>
     <div v-if="steps && steps.length" class="mb-6">
       <p class="text-gray-900 text-sm font-semibold mb-2">DÉMARCHE</p>
       <ol class="space-y-2">
@@ -139,3 +138,17 @@ const domainClass = computed(() => {
     </div>
   </div>
 </template>
+
+<style>
+.retro-frame::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  right: 8px;
+  bottom: 8px;
+  border: 2px dashed #8b4513; /* bordure intérieure en pointillé */
+  pointer-events: none;
+  border-radius: 12px;
+}
+</style>

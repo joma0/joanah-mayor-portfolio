@@ -18,10 +18,18 @@ const closeProject = () => {
 </script>
 
 <template>
-  <div class="bg-[#E6D3B5] min-h-screen flex flex-col items-center">
-    <h1 class="text-5xl font-bold text-gray-900 text-center py-8 w-full">
-      Mon portfolio
-    </h1>
+  <div class="bg-[#E6D3B5] min-h-screen flex flex-col items-center py-8">
+    <div class="retro-frame p-8 max-w-3xl mx-auto text-center space-y-4">
+      <h1 class="text-5xl font-bold text-gray-900 text-center py-2 w-full">
+        Joanah Mayor
+      </h1>
+      <p>Actuellement en 3e année d'ingénierie des médias à la HEIG-VD.</p>
+      <p>J'aime le dev et le design, et un mélange des deux c'est l'idéal.</p>
+    </div>
+
+    <h2 class="text-3xl font-bold text-gray-900 text-center py-8 w-full">
+      Mes projets
+    </h2>
 
     <!-- Badge domaine -->
     <div class="mb-3 flex justify-center gap-4">
@@ -31,7 +39,7 @@ const closeProject = () => {
     </div>
 
     <div
-      class="grid p-4 md:p-12 lg:p-16 max-w-7xl w-full gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-auto"
+      class="grid p-4 md:p-4 lg:px-48 max-w-7xl w-full gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-auto"
     >
       <div
         v-for="project in projects"
@@ -119,5 +127,25 @@ const closeProject = () => {
 .wood-background > * {
   position: relative;
   z-index: 1;
+}
+
+.retro-frame {
+  border: 4px solid #8b4513; /* bordure brun chocolat */
+  border-radius: 16px; /* coins arrondis */
+  box-shadow: 4px 4px 0px #d2b48c; /* effet relief façon plateau de jeu */
+  background: #fdf5e6; /* fond “vieux papier” */
+  position: relative;
+}
+
+.retro-frame::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  right: 8px;
+  bottom: 8px;
+  border: 2px dashed #8b4513; /* bordure intérieure en pointillé */
+  pointer-events: none;
+  border-radius: 12px;
 }
 </style>

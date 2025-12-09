@@ -5,7 +5,7 @@ import BadgeDomain from "../components/BadgeDomain.vue";
 import projects from "../../data/projects.json";
 import { ref } from "vue";
 
-const IMG_BASE_URL = "../../../public/assets/";
+const IMG_BASE_URL = "../../../dist/assets/";
 const selectedProject = ref(null);
 
 const openProject = (project) => {

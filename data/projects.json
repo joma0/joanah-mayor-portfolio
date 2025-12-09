@@ -36,22 +36,22 @@
       {
         "title": "Des instants du passé à portée de main",
         "description": "Retrouvez une vaste sélection de destinations, classées par thème, région ou ambiance. Des grandes dates aux évènements les plus méconnus,il y en a pour tous.",
-        "image": "url"
+        "image": "chronotours_feature_1.png"
       },
       {
         "title": "Soyez fin prêt pour votre voyage",
         "description": "Ne laissez rien au hasard grâce à un guide de voyage détaillé pour chaque destination, rédigé par des experts et agrémenté d’après les avis de nos utilisateurs. ",
-        "image": "url"
+        "image": "chronotours_feature_2.png"
       },
       {
         "title": "Replongez dans vos plus belles aventures",
         "description": "Avec le carnet de bord, ne perdez rien de vos aventures : vos meilleures anecdotes, vos plus belles photos, ou encore vos rencontres les plus marquantes. ",
-        "image": "url"
+        "image": "chronotours_feature_3.png"
       },
       {
         "title": "Votre voyage de A à Z sur une seule app",
         "description": "De la réservation à l’impression de votre carnet de bord, tout se passe sur une seule application. Avant, pendant et après votre voyage, gardez le contrôle. ",
-        "image": "url"
+        "image": "chronotours_feature_4.png"
       }
     ],
     "steps": [

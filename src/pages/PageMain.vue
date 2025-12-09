@@ -2,23 +2,39 @@
 import CardProjectFull from "../components/CardProjectFull.vue";
 import CardProjectResume from "../components/CardProjectResume.vue";
 import projects from "../../data/projects.json";
+import { ref } from "vue";
 
 const IMG_BASE_URL = "../../../public/assets/";
+const selectedProject = ref(null);
+
+const openProject = (project) => {
+  selectedProject.value = project;
+};
+
+const closeProject = () => {
+  selectedProject.value = null;
+};
 </script>
 
 <template>
-  <div class="wood-background min-h-screen">
-    <h1>Mon portfolio</h1>
+  <div class="bg-[#E6D3B5] min-h-screen flex flex-col items-center">
+    <h1 class="text-5xl font-bold text-gray-900 text-center py-8 w-full">
+      Mon portfolio
+    </h1>
 
     <div
-      class="grid p-4"
+      class="grid p-4 md:p-12 lg:p-16 max-w-7xl w-full"
       style="
         grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
         column-gap: 1rem;
         row-gap: 1rem;
       "
     >
-      <div v-for="project in projects" :key="project.title">
+      <div
+        v-for="project in projects"
+        :key="project.title"
+        @click="openProject(project)"
+      >
         <CardProjectResume
           :title="project.title"
           :domain="project.domain"
@@ -29,19 +45,34 @@ const IMG_BASE_URL = "../../../public/assets/";
         ></CardProjectResume>
       </div>
     </div>
+  </div>
 
-    <li v-for="project in projects" :key="project.title">
+  <!-- Overlay modal en dehors du wood-background -->
+  <div
+    v-if="selectedProject"
+    class="fixed inset-0 flex items-center justify-center"
+    style="z-index: 9999; background-color: rgba(0, 0, 0, 0.7)"
+    @click="closeProject"
+  >
+    <div class="relative" @click.stop>
+      <button
+        class="absolute top-4 right-4 text-white bg-gray-900 hover:bg-gray-700 rounded-full w-10 h-10 flex items-center justify-center"
+        style="z-index: 10000"
+        @click="closeProject"
+      >
+        ✕
+      </button>
       <CardProjectFull
-        :title="project.title"
-        :domain="project.domain"
-        :long_description="project.long_description"
-        :features="project.features"
-        :steps="project.steps"
-        :result="project.result"
-        :tools="project.tools"
-        :dev_languages="project.dev_languages"
+        :title="selectedProject.title"
+        :domain="selectedProject.domain"
+        :long_description="selectedProject.long_description"
+        :features="selectedProject.features"
+        :steps="selectedProject.steps"
+        :results="selectedProject.result"
+        :tools="selectedProject.tools"
+        :dev_languages="selectedProject.dev_languages"
       ></CardProjectFull>
-    </li>
+    </div>
   </div>
 </template>
 

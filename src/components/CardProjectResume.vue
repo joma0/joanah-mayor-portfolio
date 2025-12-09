@@ -13,7 +13,7 @@ const props = defineProps({
 
 <template>
   <div
-    class="relative w-60 h-80 bg-white rounded-2xl p-5 shadow-lg border-3 border-gray-800 hover:shadow-2xl transition-all duration-300 hover:scale-105 cursor-pointer flex flex-col"
+    class="relative w-60 h-80 rounded-2xl p-5 shadow-lg border-3 border-gray-800 hover:shadow-2xl transition-all duration-300 hover:scale-105 cursor-pointer flex flex-col"
   >
     <!-- Titre centré en haut -->
     <h2 class="text-1xl font-bold text-gray-900 mb-2 text-center tracking-wide">
@@ -38,3 +38,15 @@ const props = defineProps({
     </p>
   </div>
 </template>
+
+<style>
+.uxui {
+  background-color: #023059;
+}
+.dev {
+  background-color: #d98032;
+}
+.design {
+  background-color: #8c7e35;
+}
+</style>
